@@ -17,6 +17,7 @@ int main(void)
     _printf("GOT: %R\n", "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.");
 
     _printf("\nEXPECTING: EBG13 (\"ebgngr ol 13 cynprf\", fbzrgvzrf ulcurangrq EBG-13) vf n fvzcyr yrggre fhofgvghgvba pvcure.\n\n");
+    _printf("Non Printable:  %S\n", "Best\nSchool");
     _printf("Binary: %b\n", 98);
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
@@ -43,6 +44,7 @@ int main(void)
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
     _printf("Reverse string:[%r]\n", str);
-    printf("Unknown:[%r]\n", str);
+    _printf("Unknown:[%r]\n");
+    printf("Unknown:[%r]\n");
     return (0);
 }
