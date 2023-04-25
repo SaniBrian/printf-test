@@ -1,18 +1,18 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-*print_string - prints string specifier
+*print_lower_hexa - prints hexadecimal lowercase
 *@args: current argument
 *Return: print size
 */
 
-int print_string(va_list args)
+
+int print_lower_hexa(va_list args)
 {
-	char *str;
-	char *ptr;
+	char *str, *ptr;
 	int size;
 
-	ptr = va_arg(args, char *);
+	ptr = hexa_num_base(va_arg(args, unsigned long int), 'l');
 	if (ptr != NULL)
 	{
 		str = ptr;

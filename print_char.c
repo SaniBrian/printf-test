@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
 *print_char - prints char specifier
 *@args: current argument
