@@ -13,6 +13,7 @@ int main(void)
     int len2;
     unsigned int ui;
     void *addr;
+    char str[] = "Hello Brian";
 
     _printf("GOT: %R\n", "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.");
 
@@ -42,7 +43,7 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
+    _printf("Reverse string:[%r]\n", str);
+    printf("Unknown:[%r]\n", str);
     return (0);
 }
