@@ -6,6 +6,7 @@
  *
  * Return: Always 0
  */
+
 int main(void)
 {
     int len;
@@ -21,11 +22,11 @@ int main(void)
     fflush(stdout);
     if (len != len2)
     {
-    	printf("Lengths differ.\n");
+    	printf("Lengths differ.\n\n");
 	fflush(stdout);
     } 
   
-    len = _printf("\n%!\n");
+    len = _printf("%!\n");
     len2 = printf("%!\n");
     fflush(stdout);
     if (len != len2)
