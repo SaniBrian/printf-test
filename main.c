@@ -13,8 +13,28 @@ int main(void)
     unsigned int ui;
     void *addr;
     char str[] = "Hello Brian";
+    
+    long int l = UINT_MAX;
+    l += 1024;
+    len = _printf("%x\n", l);
+    len2 = printf("%x\n", l);
+    fflush(stdout);
+    if (len != len2)
+    {
+    	printf("Lengths differ.\n");
+	fflush(stdout);
+    } 
+  
+    len = _printf("\n%!\n");
+    len2 = printf("%!\n");
+    fflush(stdout);
+    if (len != len2)
+    {
+		printf("Lengths differ.\n\n");
+		fflush(stdout);
+    }
 
-    _printf("GOT: %R\n", "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.");
+    _printf("\nGOT: %R\n", "ROT13 (\"rotate by 13 places\", sometimes hyphenated ROT-13) is a simple letter substitution cipher.");
 
     _printf("\nEXPECTING: EBG13 (\"ebgngr ol 13 cynprf\", fbzrgvzrf ulcurangrq EBG-13) vf n fvzcyr yrggre fhofgvghgvba pvcure.\n\n");
     _printf("Non Printable:  %S\n", "Best\nSchool");

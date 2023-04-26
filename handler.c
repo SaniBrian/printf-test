@@ -25,16 +25,13 @@ int handler(const char *format, va_list args, int *i)
 		{'p', print_address},
 		{'r', print_reverse},
 		{'R', print_rot13},
+		{'S', print_non_printable},
+		{'%', print_percent},
 		{'0', NULL}
 	};
 	*i = *i + 1;
 	if (format[*i] == '\0')
 		return (-1);
-	if (format[*i] == '%')
-	{
-		_putchar('%');
-		return (1);
-	}
 	for (j = 0; specifiers[j].type != '0'; j++)
 	{
 		if (specifiers[j].type == format[*i])
@@ -43,6 +40,7 @@ int handler(const char *format, va_list args, int *i)
 			return (printed);
 		}
 	}
+	_putchar('%');
 	_putchar(format[*i]);
-	return (1);
+	return (2);
 }

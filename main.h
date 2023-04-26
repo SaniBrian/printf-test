@@ -27,7 +27,7 @@ char *hexa_num_base(unsigned long int num, char ch);
 int print_integer(va_list args);
 int print_string(va_list args);
 int print_char(va_list args);
-int print_percent(va_list args);
+int print_percent(__attribute__((unused))va_list args);
 int handler(const char *format, va_list args, int *i);
 int print_binary(va_list args);
 int print_unsigned_int(va_list args);
@@ -37,6 +37,8 @@ int print_upper_hexa(va_list args);
 int print_address(va_list args);
 int print_reverse(va_list args);
 int print_rot13(va_list args);
-
+int print_non_printable(va_list args);
+int print_str(char *str);
+int _strcmp(char *s1, char *s2);
 
 #endif
